@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    text-shadow: 1px 1px 3px whitesmoke;
+}
+
+.medan{
+    max-width: 90vw;
+    min-height: 80vh;
+    background: linear-gradient(to top, rgb(0, 113, 0), rgb(35, 255, 35));
+    padding: 250px 500px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 10px 5px rgb(0, 100, 0);
+    position: relative;
+    margin-top: 15px;
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(red, rgb(126, 0, 0));
+    border-radius: 50%;
+    border: 2px solid rgba(245, 245, 245, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: animaX 3s linear infinite alternate, animaY 0.8s ease-out infinite alternate-reverse;
+}
+
+@keyframes animaX {
+    from{
+        left: 0;
+    }
+    to{
+        left: 95%;
+    }
+}       
+
+@keyframes animaY {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 90%;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .medan{
+        padding: 0px 350px;
+        /* max-width: 100vw;      */
+        /* margin: 50px;    */
+
+    }
+}
+
+@media screen and (max-width : 425px) {
+    .medan{
+        padding: 0px 165px;
+        /* max-width: 100vw;      */
+        /* margin: 50px;    */
+
+    }
+}
